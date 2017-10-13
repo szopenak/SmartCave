@@ -14,8 +14,8 @@ public class SchedulersConfig {
 	@Autowired
 	WeatherService weatherService;
 
-	@Scheduled(fixedRate = 1000)
+	@Scheduled(fixedRate = 10000)
 	public void scheduleFixedRateTask() {
-	    weatherService.getCurrentWeather();
+	    System.out.println(weatherService.getCurrentWeather());
 	}
 }
